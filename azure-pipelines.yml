@@ -10,7 +10,5 @@ steps:
 - task: MyTask@1
   inputs:
     arg1: value1
-
-# Salidas de la canalización
-outputs:
-- myOutput: value2
+  outputs:
+    - myOutput: value2
