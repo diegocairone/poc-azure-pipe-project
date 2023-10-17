@@ -4,8 +4,7 @@ name: MyPipeline
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: default
 
 stages:
   - stage: BuildApp
