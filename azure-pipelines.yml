@@ -1,14 +1,20 @@
-# Definición de la canalización
 name: MyPipeline
 
-# Configuraciones de la canalización
+## Configuraciones de la canalización
 trigger:
-- push
+- main
 
-# Pasos de la canalización
-steps:
-- task: MyTask@1
-  inputs:
-    arg1: value1
-  outputs:
-    - myOutput: value2
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: BuildApp
+    dependsOn: []
+    displayName: Build Apps
+    jobs:
+      - job: BuildFrontendApp
+        dependsOn: []
+        displayName: Build Frontend App
+        steps:
+          - script: echo building frontend app 
+            displayName: build frontend app
