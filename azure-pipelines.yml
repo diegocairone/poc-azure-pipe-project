@@ -6,10 +6,13 @@ trigger:
 
 stages:
   - stage: BuildApp
+    dependsOn: []
     displayName: Build Apps
     jobs:
       - job: BuildFrontendApp
+        dependsOn: []
         displayName: Build Frontend App
         steps:
           - script: echo building frontend app 
+            dependsOn: []
             displayName: build frontend app
