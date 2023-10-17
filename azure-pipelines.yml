@@ -14,5 +14,4 @@ stages:
         displayName: Build Frontend App
         steps:
           - script: echo building frontend app 
-            dependsOn: []
             displayName: build frontend app
