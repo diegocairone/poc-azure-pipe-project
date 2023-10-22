@@ -6,7 +6,7 @@ stages:
     displayName: Build Apps
     jobs:
       - job: MyBuildingJob
-        displayName: My building job in a template ${{ paramters.param1 }}
+        displayName: My building job in a template ${{ parameters.param1 }}
         steps:
           - task: Bash@3
             inputs:
