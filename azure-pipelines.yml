@@ -21,5 +21,5 @@ stages:
       - job: MyDeploymentJob
         displayName: My deploying job
         steps:
-          - script: echo deploying this app from master branch with var $(my-var1)
+          - script: echo deploying this app from master branch with var $(myvar1)
             displayName: deploy frontend app
