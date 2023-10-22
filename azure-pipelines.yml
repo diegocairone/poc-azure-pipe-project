@@ -2,7 +2,7 @@ name: MyPipeline
 
 ## Configuraciones de la canalización
 trigger:
-- main
+- master
 
 pool: Default
 
@@ -15,5 +15,5 @@ stages:
         dependsOn: []
         displayName: Build Frontend App
         steps:
-          - script: echo building frontend app 
+          - script: echo building this app from master branch
             displayName: build frontend app
