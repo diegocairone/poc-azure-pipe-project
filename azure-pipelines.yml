@@ -13,9 +13,10 @@ stages:
       - job: MyBuildingJob
         displayName: My building job
         steps:
-          - task: Delay@1
+          - task: Bash@3
             inputs:
-              delayForMinutes: '1'
+              targetType: 'inline'
+              script: 'sleep 10'
           - script: ls -l
             displayName: listing files            
           - script: echo i am building my app
