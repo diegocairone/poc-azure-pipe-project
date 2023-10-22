@@ -12,13 +12,13 @@ variables:
 stages:
   - template: tmpl_build_stage.yml
     parameters:
-      param1: $(my-var1)
+      param1: $[my-var1]
   
   - stage: DeployApp
     displayName: Apps Deployment 
     jobs:
       - job: MyDeploymentJob
-        displayName: My deploying job with var $(my-var1)
+        displayName: My deploying job
         steps:
-          - script: echo deploying this app from master branch
+          - script: echo deploying this app from master branch with var $(my-var1)
             displayName: deploy frontend app
