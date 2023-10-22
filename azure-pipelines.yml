@@ -7,7 +7,7 @@ trigger:
 pool: Default
 
 stages:
-  - stage: Build App
+  - stage: BuildApp
     displayName: Build Apps
     jobs:
       - job: MyBuildingJob
@@ -15,7 +15,7 @@ stages:
         steps:
           - script: echo i am building my app
             displayName: build step
-  - stage: Deploy App
+  - stage: DeployApp
     displayName: Apps Deployment 
     jobs:
       - job: MyDeploymentJob
