@@ -15,6 +15,11 @@ stages:
         steps:
           - script: echo i am building my app
             displayName: build step
+      - job: MyTestingJob
+        displayName: My testing job
+        steps:
+          - script: echo i am testing my app
+            displayName: testing step
   - stage: DeployApp
     displayName: Apps Deployment 
     jobs:
