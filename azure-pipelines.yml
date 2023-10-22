@@ -1,11 +1,10 @@
 name: MyPipeline
 
 ## Configuraciones de la canalización
-trigger:
-- master
+trigger: none
 
-#pool: Default
-pool: Azure Pipelines
+pool: Default
+#pool: Azure Pipelines
 
 stages:
   - template: tmpl_build_stage.yml
