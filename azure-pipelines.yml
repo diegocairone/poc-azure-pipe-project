@@ -4,7 +4,7 @@ name: MyPipeline
 trigger:
 - main
 
-pool: Azure Pipelines
+pool: Default
 
 stages:
   - stage: BuildApp
