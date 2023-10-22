@@ -7,13 +7,13 @@ pool: Default
 #pool: Azure Pipelines
 
 variables:
-  - name: 'my-var1'
+  - name: 'myvar1'
     value: 'this is var 1'
 
 stages:
   - template: tmpl_build_stage.yml
     parameters:
-      param1: '${{ variables.my-var1 }}'
+      param1: '${{ variables.myvar1 }}'
   
   - stage: DeployApp
     displayName: Apps Deployment 
