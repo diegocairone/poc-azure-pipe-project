@@ -15,6 +15,7 @@ stages:
             displayName: build step
       - job: MyTestingJob
         displayName: My testing job
+        dependsOn: MyBuildingJob
         steps:
           - script: echo i am testing my app
             displayName: testing step
