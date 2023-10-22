@@ -6,6 +6,9 @@ trigger: none
 pool: Default
 #pool: Azure Pipelines
 
+variables:
+  my-var1: 'this is var 1'
+
 stages:
   - template: tmpl_build_stage.yml
   
@@ -15,5 +18,5 @@ stages:
       - job: MyDeploymentJob
         displayName: My deploying job
         steps:
-          - script: echo deploying this app from master branch
+          - script: echo deploying this app from master branch with var $(my-var1)
             displayName: deploy frontend app
