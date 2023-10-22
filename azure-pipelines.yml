@@ -7,13 +7,19 @@ trigger:
 pool: Default
 
 stages:
-  - stage: BuildApp
-    dependsOn: []
+  - stage: Build App
     displayName: Build Apps
     jobs:
-      - job: BuildFrontendApp
-        dependsOn: []
-        displayName: Build Frontend App
+      - job: MyBuildingJob
+        displayName: My building job
         steps:
-          - script: echo building this app from master branch
-            displayName: build frontend app
+          - script: echo i am building my app
+            displayName: build step
+  - stage: Deploy App
+    displayName: Apps Deployment 
+    jobs:
+      - job: MyDeploymentJob
+        displayName: My deploying job
+        steps:
+          - script: echo deploying this app from master branch
+            displayName: deploy frontend app
