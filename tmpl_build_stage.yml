@@ -3,7 +3,7 @@ stages:
     displayName: Build Apps
     jobs:
       - job: MyBuildingJob
-        displayName: My building job
+        displayName: My building job in a template
         steps:
           - task: Bash@3
             inputs:
