@@ -11,6 +11,8 @@ variables:
 
 stages:
   - template: tmpl_build_stage.yml
+    parameters:
+      param1: ${{ variables.my-var1 }}
   
   - stage: DeployApp
     displayName: Apps Deployment 
